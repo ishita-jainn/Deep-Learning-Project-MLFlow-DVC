@@ -21,6 +21,7 @@ list_of_files = [
     "dvc.yaml",
     "params.yaml",
     "requirements.txt",
+    "pyproject.toml"
     "setup.py",
     "research/trials.ipynb",   #all jupyter notebook experiments
     "templates/index.html" #for flask framework

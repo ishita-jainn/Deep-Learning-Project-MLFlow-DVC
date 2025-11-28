@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: cnnClassifier
+Version: 0.0.0
+Summary: A small python package for CNN app
+Author-email: ishita-jainn <ishitaj232@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/ishita-jainn/Deep-Learning-Project-MLFlow-DVC
+Project-URL: BugTracker, https://github.com/ishita-jainn/Deep-Learning-Project-MLFlow-DVC/issues
+Keywords: deep learning,cnn,mlflow,project
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Deep-Learning-Project-MLFlow-DVC
+
+
+# How to run?
+
+### STEPS:
+
+Clone the repository
+
+```bash
+https://github.com/ishita-jainn/Deep-Learning-Project-MLFlow-DVC
+```
+
+### STEP 01- Create a conda environment after opening the repository
+
+```bash
+conda create -n cnn-env python=3.9 -y
+```
+
+```bash
+conda activate cnn-env
+```
+
+
+### STEP 02- install the requirements
+```bash
+pip install -r requirements.txt
+```
