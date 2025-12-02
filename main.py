@@ -1,0 +1,2 @@
+from  cnnClassifier import logger  #dont have to put src.cnnClassifier because I have put __init__ file in cnnClassifier and put my logger there only.my cnnClassifier is acting like a package now.
+logger.info("Welcome to custom log!!")
