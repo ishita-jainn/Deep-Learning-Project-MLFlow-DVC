@@ -1,2 +1,13 @@
-from  cnnClassifier import logger  #dont have to put src.cnnClassifier because I have put __init__ file in cnnClassifier and put my logger there only.my cnnClassifier is acting like a package now.
-logger.info("Welcome to custom log!!")
+from cnnClassifier import logger
+from cnnClassifier.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
+
+STAGE_NAME = "Data ingestion stage"
+try:
+    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+    obj = DataIngestionTrainingPipeline()
+    obj.main()
+    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+    
+except Exception as e:
+    logger.exception(e)
+    raise e

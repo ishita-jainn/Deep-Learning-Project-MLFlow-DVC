@@ -1,2 +1,26 @@
 [2025-11-28 14:25:09,714: INFO: main: Welcome to custom log]
 [2025-11-28 14:25:22,981: INFO: main: Welcome to custom log!!]
+[2025-12-05 01:03:43,467: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-05 01:03:43,493: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-05 01:03:43,496: INFO: common: created directory at : artifacts]
+[2025-12-05 01:06:08,001: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-05 01:06:08,007: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-05 01:06:08,008: INFO: common: created directory at : artifacts]
+[2025-12-05 01:06:08,009: INFO: common: created directory at : data_ingestion]
+[2025-12-05 01:06:08,034: INFO: 2193935216: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-05 01:06:22,261: INFO: 2193935216: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-05 01:06:22,327: INFO: 2193935216: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-05 12:16:47,331: INFO: main: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-05 12:16:47,358: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-05 12:16:47,376: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-05 12:16:47,378: INFO: common: created directory at : artifacts]
+[2025-12-05 12:16:47,379: INFO: common: created directory at : data_ingestion]
+[2025-12-05 12:16:47,382: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-05 12:16:57,974: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-05 12:16:58,011: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-05 12:16:59,538: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-05 12:16:59,539: INFO: main: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
