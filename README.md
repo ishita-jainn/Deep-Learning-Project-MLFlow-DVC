@@ -39,3 +39,6 @@ conda activate cnn-env
 ```bash
 pip install -r requirements.txt
 ```
+
+### dagshub
+MLFLOW tracking URI : https://dagshub.com/ishita-jainn/Deep-Learning-Project-MLFlow-DVC.mlflow/
