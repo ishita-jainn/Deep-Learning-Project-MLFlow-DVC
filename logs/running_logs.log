@@ -214,3 +214,462 @@ Traceback (most recent call last):
   File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\setuptools\_distutils\file_util.py", line 104, in copy_file
     from distutils._modified import newer
 ModuleNotFoundError: No module named 'distutils._modified'
+[2025-12-09 00:46:47,447: INFO: main: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-09 00:46:47,451: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-09 00:46:47,456: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-09 00:46:47,456: INFO: common: created directory at : artifacts]
+[2025-12-09 00:46:47,457: INFO: common: created directory at : data_ingestion]
+[2025-12-09 00:46:47,458: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-09 00:47:03,119: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-09 00:47:03,158: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-09 00:47:04,672: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-09 00:47:04,672: INFO: main: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-09 00:47:04,672: INFO: main: >>>>>> stage Prepare base model stage started <<<<<<]
+[2025-12-09 00:47:04,679: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-09 00:47:04,682: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-09 00:47:04,683: INFO: common: created directory at : artifacts]
+[2025-12-09 00:47:04,685: INFO: common: created directory at : artifacts/prepare_base_model]
+[2025-12-09 00:47:06,449: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-12-09 00:47:07,234: INFO: main: >>>>>> stage Prepare base model stage completed <<<<<<
+
+x==========x]
+[2025-12-09 00:47:07,234: INFO: main: >>>>>> Stage Model Training started <<<<<<]
+[2025-12-09 00:47:07,244: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-09 00:47:07,252: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-09 00:47:07,254: INFO: common: created directory at : artifacts]
+[2025-12-09 00:47:07,257: INFO: common: created directory at : artifacts\training]
+[2025-12-09 00:49:45,302: INFO: main: >>>>>> Stage Model Training completed <<<<<<
+
+x==========x]
+[2025-12-09 00:49:45,303: INFO: main: >>>>>> Stage Evaluation Stage started <<<<<<]
+[2025-12-09 00:49:45,322: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-09 00:49:45,327: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-09 00:49:45,331: INFO: common: created directory at : artifacts]
+[2025-12-09 10:21:08,823: INFO: common: json file saved at: scores.json]
+[2025-12-09 10:21:22,072: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-12-09 10:21:25,648: INFO: builder_impl: Assets written to: C:\Users\ISHITA\AppData\Local\Temp\tmpmcygv2dl\model\data\model\assets]
+[2025-12-09 10:22:26,248: ERROR: main: No module named 'distutils._modified']
+Traceback (most recent call last):
+  File "D:\Deep Learning Projects\Deep-learning-project-mlflow-dvc\Deep-Learning-Project-MLFlow-DVC\main.py", line 46, in <module>
+    obj.main()
+  File "D:\Deep Learning Projects\Deep-learning-project-mlflow-dvc\Deep-Learning-Project-MLFlow-DVC\src\cnnClassifier\pipeline\stage_04_model_evaluation.py", line 16, in main
+    evaluation.log_into_mlflow()
+  File "D:\Deep Learning Projects\Deep-learning-project-mlflow-dvc\Deep-Learning-Project-MLFlow-DVC\src\cnnClassifier\components\model_evaluation_mlflow.py", line 66, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model")
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\tensorflow\__init__.py", line 222, in log_model
+    return Model.log(
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\store\artifact\local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\setuptools\_distutils\dir_util.py", line 150, in copy_tree
+    return list(itertools.chain.from_iterable(map(copy_one, names)))
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\setuptools\_distutils\dir_util.py", line 192, in _copy_one
+    file_util.copy_file(
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\setuptools\_distutils\file_util.py", line 104, in copy_file
+    from distutils._modified import newer
+ModuleNotFoundError: No module named 'distutils._modified'
+[2025-12-12 23:36:03,185: INFO: main: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-12 23:36:03,205: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-12 23:36:03,229: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-12 23:36:03,230: INFO: common: created directory at : artifacts]
+[2025-12-12 23:36:03,231: INFO: common: created directory at : data_ingestion]
+[2025-12-12 23:36:03,231: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-12 23:36:14,225: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-12 23:36:14,248: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-12 23:36:14,990: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-12 23:36:14,990: INFO: main: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-12 23:36:14,991: INFO: main: >>>>>> stage Prepare base model stage started <<<<<<]
+[2025-12-12 23:36:14,994: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-12 23:36:14,997: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-12 23:36:14,998: INFO: common: created directory at : artifacts]
+[2025-12-12 23:36:14,998: INFO: common: created directory at : artifacts/prepare_base_model]
+[2025-12-12 23:36:15,840: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-12-12 23:36:16,566: INFO: main: >>>>>> stage Prepare base model stage completed <<<<<<
+
+x==========x]
+[2025-12-12 23:36:16,566: INFO: main: >>>>>> Stage Model Training started <<<<<<]
+[2025-12-12 23:36:16,569: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-12 23:36:16,572: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-12 23:36:16,573: INFO: common: created directory at : artifacts]
+[2025-12-12 23:36:16,574: INFO: common: created directory at : artifacts\training]
+[2025-12-12 23:37:50,602: INFO: main: >>>>>> Stage Model Training completed <<<<<<
+
+x==========x]
+[2025-12-12 23:37:50,604: INFO: main: >>>>>> Stage Evaluation Stage started <<<<<<]
+[2025-12-12 23:37:50,608: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-12 23:37:50,612: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-12 23:37:50,613: INFO: common: created directory at : artifacts]
+[2025-12-12 23:38:20,133: INFO: common: json file saved at: scores.json]
+[2025-12-12 23:38:22,670: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-12-12 23:38:23,535: INFO: builder_impl: Assets written to: C:\Users\ISHITA\AppData\Local\Temp\tmp34ei67xa\model\data\model\assets]
+[2025-12-12 23:38:41,625: ERROR: main: No module named 'distutils._modified']
+Traceback (most recent call last):
+  File "D:\Deep Learning Projects\Deep-learning-project-mlflow-dvc\Deep-Learning-Project-MLFlow-DVC\main.py", line 46, in <module>
+    obj.main()
+  File "D:\Deep Learning Projects\Deep-learning-project-mlflow-dvc\Deep-Learning-Project-MLFlow-DVC\src\cnnClassifier\pipeline\stage_04_model_evaluation.py", line 16, in main
+    evaluation.log_into_mlflow()
+  File "D:\Deep Learning Projects\Deep-learning-project-mlflow-dvc\Deep-Learning-Project-MLFlow-DVC\src\cnnClassifier\components\model_evaluation_mlflow.py", line 66, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model")
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\tensorflow\__init__.py", line 222, in log_model
+    return Model.log(
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\store\artifact\local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\setuptools\_distutils\dir_util.py", line 150, in copy_tree
+    return list(itertools.chain.from_iterable(map(copy_one, names)))
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\setuptools\_distutils\dir_util.py", line 192, in _copy_one
+    file_util.copy_file(
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\setuptools\_distutils\file_util.py", line 104, in copy_file
+    from distutils._modified import newer
+ModuleNotFoundError: No module named 'distutils._modified'
+[2025-12-12 23:46:05,705: INFO: main: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-12 23:46:05,710: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-12 23:46:05,717: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-12 23:46:05,719: INFO: common: created directory at : artifacts]
+[2025-12-12 23:46:05,720: INFO: common: created directory at : data_ingestion]
+[2025-12-12 23:46:05,721: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-12 23:46:17,056: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-12 23:46:17,080: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-12 23:46:17,907: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-12 23:46:17,908: INFO: main: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-12 23:46:17,908: INFO: main: >>>>>> stage Prepare base model stage started <<<<<<]
+[2025-12-12 23:46:17,910: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-12 23:46:17,914: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-12 23:46:17,915: INFO: common: created directory at : artifacts]
+[2025-12-12 23:46:17,917: INFO: common: created directory at : artifacts/prepare_base_model]
+[2025-12-12 23:46:18,895: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-12-12 23:46:19,459: INFO: main: >>>>>> stage Prepare base model stage completed <<<<<<
+
+x==========x]
+[2025-12-12 23:46:19,459: INFO: main: >>>>>> Stage Model Training started <<<<<<]
+[2025-12-12 23:46:19,463: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-12 23:46:19,465: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-12 23:46:19,465: INFO: common: created directory at : artifacts]
+[2025-12-12 23:46:19,466: INFO: common: created directory at : artifacts\training]
+[2025-12-12 23:48:13,030: INFO: main: >>>>>> Stage Model Training completed <<<<<<
+
+x==========x]
+[2025-12-12 23:48:13,031: INFO: main: >>>>>> Stage Evaluation Stage started <<<<<<]
+[2025-12-12 23:48:13,037: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-12 23:48:13,041: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-12 23:48:13,042: INFO: common: created directory at : artifacts]
+[2025-12-12 23:48:45,103: INFO: common: json file saved at: scores.json]
+[2025-12-12 23:48:48,207: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-12-12 23:48:49,027: INFO: builder_impl: Assets written to: C:\Users\ISHITA\AppData\Local\Temp\tmped_9io2i\model\data\model\assets]
+[2025-12-12 23:49:09,036: ERROR: main: No module named 'distutils._modified']
+Traceback (most recent call last):
+  File "D:\Deep Learning Projects\Deep-learning-project-mlflow-dvc\Deep-Learning-Project-MLFlow-DVC\main.py", line 46, in <module>
+    obj.main()
+  File "D:\Deep Learning Projects\Deep-learning-project-mlflow-dvc\Deep-Learning-Project-MLFlow-DVC\src\cnnClassifier\pipeline\stage_04_model_evaluation.py", line 16, in main
+    evaluation.log_into_mlflow()
+  File "D:\Deep Learning Projects\Deep-learning-project-mlflow-dvc\Deep-Learning-Project-MLFlow-DVC\src\cnnClassifier\components\model_evaluation_mlflow.py", line 66, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model")
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\tensorflow\__init__.py", line 222, in log_model
+    return Model.log(
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\mlflow\store\artifact\local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\setuptools\_distutils\dir_util.py", line 150, in copy_tree
+    return list(itertools.chain.from_iterable(map(copy_one, names)))
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\setuptools\_distutils\dir_util.py", line 192, in _copy_one
+    file_util.copy_file(
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\setuptools\_distutils\file_util.py", line 104, in copy_file
+    from distutils._modified import newer
+ModuleNotFoundError: No module named 'distutils._modified'
+[2025-12-12 23:56:24,616: INFO: main: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-12 23:56:24,620: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-12 23:56:24,625: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-12 23:56:24,627: INFO: common: created directory at : artifacts]
+[2025-12-12 23:56:24,628: INFO: common: created directory at : data_ingestion]
+[2025-12-12 23:56:24,629: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-12 23:56:45,278: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-12 23:56:45,310: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-12 23:56:46,075: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-12 23:56:46,076: INFO: main: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-12 23:56:46,076: INFO: main: >>>>>> stage Prepare base model stage started <<<<<<]
+[2025-12-12 23:56:46,078: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-12 23:56:46,080: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-12 23:56:46,082: INFO: common: created directory at : artifacts]
+[2025-12-12 23:56:46,083: INFO: common: created directory at : artifacts/prepare_base_model]
+[2025-12-12 23:56:46,853: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-12-12 23:56:47,509: INFO: main: >>>>>> stage Prepare base model stage completed <<<<<<
+
+x==========x]
+[2025-12-12 23:56:47,509: INFO: main: >>>>>> Stage Model Training started <<<<<<]
+[2025-12-12 23:56:47,512: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-12 23:56:47,514: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-12 23:56:47,515: INFO: common: created directory at : artifacts]
+[2025-12-12 23:56:47,517: INFO: common: created directory at : artifacts\training]
+[2025-12-12 23:58:22,587: INFO: main: >>>>>> Stage Model Training completed <<<<<<
+
+x==========x]
+[2025-12-12 23:58:22,587: INFO: main: >>>>>> Stage Evaluation Stage started <<<<<<]
+[2025-12-12 23:58:22,591: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-12 23:58:22,595: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-12 23:58:22,597: INFO: common: created directory at : artifacts]
+[2025-12-12 23:58:51,516: INFO: common: json file saved at: scores.json]
+[2025-12-12 23:58:53,893: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-12-12 23:58:55,234: INFO: builder_impl: Assets written to: C:\Users\ISHITA\AppData\Local\Temp\tmp6huzz2tj\model\data\model\assets]
+[2025-12-12 23:59:13,841: INFO: main: >>>>>> Stage Evaluation Stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:17:22,977: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-13 00:17:22,979: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 00:17:22,982: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 00:17:22,983: INFO: common: created directory at : artifacts]
+[2025-12-13 00:17:22,984: INFO: common: created directory at : data_ingestion]
+[2025-12-13 00:17:22,985: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-13 00:17:38,988: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-13 00:17:39,095: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-13 00:17:40,973: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:17:40,974: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:21:03,458: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-13 00:21:03,461: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 00:21:03,463: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 00:21:03,464: INFO: common: created directory at : artifacts]
+[2025-12-13 00:21:03,464: INFO: common: created directory at : data_ingestion]
+[2025-12-13 00:21:03,465: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-13 00:21:17,098: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-13 00:21:17,115: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-13 00:21:17,890: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:21:17,891: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:23:32,260: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-13 00:23:32,264: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 00:23:32,267: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 00:23:32,267: INFO: common: created directory at : artifacts]
+[2025-12-13 00:23:32,268: INFO: common: created directory at : artifacts/data_ingestion]
+[2025-12-13 00:23:32,268: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-13 00:23:45,281: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-13 00:23:45,304: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-13 00:23:46,035: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:23:46,035: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:26:41,970: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-13 00:26:41,972: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 00:26:41,974: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 00:26:41,975: INFO: common: created directory at : artifacts]
+[2025-12-13 00:26:41,976: INFO: common: created directory at : artifacts/data_ingestion]
+[2025-12-13 00:26:41,977: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-13 00:26:53,769: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-13 00:26:53,797: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-13 00:26:54,504: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:26:54,506: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:28:22,420: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-13 00:28:22,422: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 00:28:22,425: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 00:28:22,426: INFO: common: created directory at : artifacts]
+[2025-12-13 00:28:22,427: INFO: common: created directory at : artifacts/data_ingestion]
+[2025-12-13 00:28:22,428: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-13 00:28:34,843: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-13 00:28:34,873: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-13 00:28:35,584: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:28:35,584: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:31:53,468: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-13 00:31:53,473: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 00:31:53,477: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 00:31:53,478: INFO: common: created directory at : artifacts]
+[2025-12-13 00:31:53,480: INFO: common: created directory at : artifacts/data_ingestion]
+[2025-12-13 00:31:53,481: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-13 00:32:04,765: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-13 00:32:04,789: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-13 00:32:05,482: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:32:05,483: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:32:24,151: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-13 00:32:24,154: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 00:32:24,156: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 00:32:24,157: INFO: common: created directory at : artifacts]
+[2025-12-13 00:32:24,157: INFO: common: created directory at : artifacts/data_ingestion]
+[2025-12-13 00:32:24,158: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-13 00:32:37,385: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-13 00:32:37,418: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-13 00:32:38,620: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:32:38,621: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:45:37,788: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-13 00:45:37,791: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 00:45:37,794: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 00:45:37,794: INFO: common: created directory at : artifacts]
+[2025-12-13 00:45:37,797: INFO: common: created directory at : artifacts/data_ingestion]
+[2025-12-13 00:45:37,798: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-13 00:45:51,916: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-13 00:45:51,942: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-13 00:45:52,781: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:45:52,781: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:49:18,321: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-13 00:49:18,324: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 00:49:18,327: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 00:49:18,329: INFO: common: created directory at : artifacts]
+[2025-12-13 00:49:18,330: INFO: common: created directory at : artifacts/data_ingestion]
+[2025-12-13 00:49:18,330: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-13 00:49:41,693: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-13 00:49:41,744: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-13 00:49:42,502: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:49:42,502: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:51:45,126: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-13 00:51:45,129: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 00:51:45,131: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 00:51:45,132: INFO: common: created directory at : artifacts]
+[2025-12-13 00:51:45,133: INFO: common: created directory at : artifacts/data_ingestion]
+[2025-12-13 00:51:45,134: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-13 00:52:03,392: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-13 00:52:03,411: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-13 00:52:04,169: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:52:04,169: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:54:15,401: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-13 00:54:15,403: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 00:54:15,405: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 00:54:15,407: INFO: common: created directory at : artifacts]
+[2025-12-13 00:54:15,407: INFO: common: created directory at : artifacts/data_ingestion]
+[2025-12-13 00:54:15,408: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-13 00:54:35,065: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-13 00:54:35,087: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-13 00:54:35,826: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 00:54:35,826: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 01:00:05,015: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-13 01:00:05,025: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 01:00:05,034: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 01:00:05,035: INFO: common: created directory at : artifacts]
+[2025-12-13 01:00:05,037: INFO: common: created directory at : artifacts/data_ingestion]
+[2025-12-13 01:00:05,040: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-13 01:00:13,065: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-13 01:00:13,102: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-13 01:00:15,291: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 01:00:15,293: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 01:02:16,749: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-13 01:02:16,754: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 01:02:16,757: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 01:02:16,759: INFO: common: created directory at : artifacts]
+[2025-12-13 01:02:16,759: INFO: common: created directory at : artifacts/data_ingestion]
+[2025-12-13 01:02:16,760: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-13 01:02:25,188: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-13 01:02:25,214: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-13 01:02:26,132: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 01:02:26,132: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 01:09:28,148: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-13 01:09:28,162: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 01:09:28,167: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 01:09:28,167: INFO: common: created directory at : artifacts]
+[2025-12-13 01:09:28,168: INFO: common: created directory at : artifacts/data_ingestion]
+[2025-12-13 01:09:28,170: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-13 01:09:54,704: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-13 01:09:54,740: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-13 01:09:55,989: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 01:09:56,002: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 01:10:24,919: INFO: stage_02_prepare_base_model: >>>>>> Stage Prepare Base Model started <<<<<<]
+[2025-12-13 01:10:24,922: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 01:10:24,924: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 01:10:24,925: INFO: common: created directory at : artifacts]
+[2025-12-13 01:10:24,925: INFO: common: created directory at : artifacts/prepare_base_model]
+[2025-12-13 01:10:25,572: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-12-13 01:10:25,968: INFO: stage_02_prepare_base_model: >>>>>> Stage Prepare Base Model completed <<<<<<
+
+x==========x]
+[2025-12-13 01:11:21,358: INFO: stage_03_model_training: >>>>>> Stage Model Training started <<<<<<]
+[2025-12-13 01:11:21,363: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 01:11:21,366: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 01:11:21,368: INFO: common: created directory at : artifacts]
+[2025-12-13 01:11:21,369: INFO: common: created directory at : artifacts\training]
+[2025-12-13 01:13:56,927: INFO: stage_03_model_training: >>>>>> Stage Model Training completed <<<<<<
+
+x==========x]
+[2025-12-13 01:14:29,929: INFO: stage_04_model_evaluation: >>>>>> Stage Evaluation Stage started <<<<<<]
+[2025-12-13 01:14:29,933: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 01:14:29,938: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 01:14:29,941: INFO: common: created directory at : artifacts]
+[2025-12-13 01:15:13,432: INFO: common: json file saved at: scores.json]
+[2025-12-13 01:15:17,200: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-12-13 01:15:18,911: INFO: builder_impl: Assets written to: C:\Users\ISHITA\AppData\Local\Temp\tmp8o3_1bm5\model\data\model\assets]
+[2025-12-13 01:15:47,077: INFO: stage_04_model_evaluation: >>>>>> Stage Evaluation Stage completed <<<<<<
+
+x==========x]
