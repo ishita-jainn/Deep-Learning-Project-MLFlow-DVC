@@ -673,3 +673,55 @@ x==========x]
 [2025-12-13 01:15:47,077: INFO: stage_04_model_evaluation: >>>>>> Stage Evaluation Stage completed <<<<<<
 
 x==========x]
+[2025-12-13 12:31:56,107: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://192.168.1.10:8081]
+[2025-12-13 12:31:56,108: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-12-13 12:32:13,776: INFO: _internal: 127.0.0.1 - - [13/Dec/2025 12:32:13] "GET / HTTP/1.1" 200 -]
+[2025-12-13 12:32:49,204: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+TypeError: cross_origin.<locals>.decorator() missing 1 required positional argument: 'f'
+[2025-12-13 12:32:49,216: INFO: _internal: 127.0.0.1 - - [13/Dec/2025 12:32:49] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-12-13 12:36:11,734: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://192.168.1.10:8081]
+[2025-12-13 12:36:11,735: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-12-13 12:36:16,966: INFO: _internal: 127.0.0.1 - - [13/Dec/2025 12:36:16] "GET / HTTP/1.1" 200 -]
+[2025-12-13 12:36:22,089: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\flask_cors\decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "D:\Deep Learning Projects\Deep-learning-project-mlflow-dvc\Deep-Learning-Project-MLFlow-DVC\app.py", line 38, in predictRoute
+    result = clApp.classifier.predict()
+  File "D:\Deep Learning Projects\Deep-learning-project-mlflow-dvc\Deep-Learning-Project-MLFlow-DVC\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\ISHITA\anaconda3\envs\cnn-new\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2025-12-13 12:36:22,099: INFO: _internal: 127.0.0.1 - - [13/Dec/2025 12:36:22] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
