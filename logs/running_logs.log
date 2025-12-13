@@ -732,3 +732,44 @@ OSError: No file or directory found at model\model.h5
 [2025-12-13 12:37:51,914: INFO: _internal: [33mPress CTRL+C to quit[0m]
 [2025-12-13 12:37:54,474: INFO: _internal: 127.0.0.1 - - [13/Dec/2025 12:37:54] "GET / HTTP/1.1" 200 -]
 [2025-12-13 12:38:01,755: INFO: _internal: 127.0.0.1 - - [13/Dec/2025 12:38:01] "POST /predict HTTP/1.1" 200 -]
+[2025-12-13 12:50:51,163: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage started <<<<<<]
+[2025-12-13 12:50:51,166: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 12:50:51,169: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 12:50:51,171: INFO: common: created directory at : artifacts]
+[2025-12-13 12:50:51,172: INFO: common: created directory at : artifacts/data_ingestion]
+[2025-12-13 12:50:51,174: INFO: data_ingestion: Downloading file from : https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into : artifacts/data_ingestion/data.zip]
+[2025-12-13 12:51:05,383: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-12-13 12:51:05,417: INFO: data_ingestion: Extracting zip file : artifacts/data_ingestion/data.zip into dir : artifacts/data_ingestion]
+[2025-12-13 12:51:06,178: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 12:51:06,178: INFO: stage_01_data_ingestion: >>>>>> stage Data ingestion stage completed <<<<<<
+
+x==========x]
+[2025-12-13 12:51:18,616: INFO: stage_02_prepare_base_model: >>>>>> Stage Prepare Base Model started <<<<<<]
+[2025-12-13 12:51:18,618: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 12:51:18,620: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 12:51:18,620: INFO: common: created directory at : artifacts]
+[2025-12-13 12:51:18,621: INFO: common: created directory at : artifacts/prepare_base_model]
+[2025-12-13 12:51:19,111: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-12-13 12:51:20,008: INFO: stage_02_prepare_base_model: >>>>>> Stage Prepare Base Model completed <<<<<<
+
+x==========x]
+[2025-12-13 12:51:28,722: INFO: stage_03_model_training: >>>>>> Stage Model Training started <<<<<<]
+[2025-12-13 12:51:28,725: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 12:51:28,727: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 12:51:28,727: INFO: common: created directory at : artifacts]
+[2025-12-13 12:51:28,727: INFO: common: created directory at : artifacts\training]
+[2025-12-13 12:53:00,211: INFO: stage_03_model_training: >>>>>> Stage Model Training completed <<<<<<
+
+x==========x]
+[2025-12-13 12:53:11,421: INFO: stage_04_model_evaluation: >>>>>> Stage Evaluation Stage started <<<<<<]
+[2025-12-13 12:53:11,423: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-12-13 12:53:11,425: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-12-13 12:53:11,426: INFO: common: created directory at : artifacts]
+[2025-12-13 12:53:39,582: INFO: common: json file saved at: scores.json]
+[2025-12-13 12:53:41,986: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2025-12-13 12:53:42,941: INFO: builder_impl: Assets written to: C:\Users\ISHITA\AppData\Local\Temp\tmppetqfs24\model\data\model\assets]
+[2025-12-13 12:54:00,362: INFO: stage_04_model_evaluation: >>>>>> Stage Evaluation Stage completed <<<<<<
+
+x==========x]

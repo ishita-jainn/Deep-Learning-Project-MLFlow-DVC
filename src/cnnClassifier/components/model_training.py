@@ -80,3 +80,8 @@ class Training:
             model=self.model
         )
 
+        self.save_model(
+            path = self.config.trained_model,
+            model= self.model
+        )
+
